@@ -4,21 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MihneaDev - Portfolio</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    // Variable overrides first
-$primary: #900;
-$enable-shadows: true;
-$prefix: "mo-";
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
 
-// Then import Bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
+        header {
+            background: linear-gradient(90deg, #333, #900);
+        }
+
+        h1, h2 {
+            font-weight: bold;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+        }
+
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-3">
-        <h1>Welcome to MihneaDev's Portfolio</h1>
+    <header class="text-white text-center py-5">
+        <h1 data-aos="fade-down">Welcome to MihneaDev's Portfolio</h1>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
             <a class="navbar-brand" href="#">MihneaDev</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,25 +65,59 @@ $prefix: "mo-";
     </nav>
     <main class="container my-5">
         <section id="about" class="mb-5">
-            <h2>About Me</h2>
-            <p>Hi! I'm MihneaDev, a passionate developer skilled in HTML, CSS, JavaScript, and GitHub workflows. I enjoy creating elegant and efficient solutions for modern web applications.</p>
+            <h2 data-aos="fade-right">About Me</h2>
+            <p data-aos="fade-up">
+                Hi! I'm MihneaDev, a passionate developer skilled in HTML, CSS, JavaScript, and GitHub workflows. I enjoy creating elegant and efficient solutions for modern web applications.
+            </p>
         </section>
         <section id="projects" class="mb-5">
-            <h2>My Projects</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Project 1:</strong> <a href="https://github.com/MihneaDev/project1" target="_blank">Amazing Project</a></li>
-                <li class="list-group-item"><strong>Project 2:</strong> <a href="https://github.com/MihneaDev/project2" target="_blank">Innovative App</a></li>
-                <li class="list-group-item"><strong>Project 3:</strong> <a href="https://github.com/MihneaDev/project3" target="_blank">Creative Website</a></li>
-            </ul>
+            <h2 data-aos="fade-left">My Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Amazing Project</h5>
+                            <p class="card-text">A brief description of this amazing project.</p>
+                            <a href="https://github.com/MihneaDev/project1" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Innovative App</h5>
+                            <p class="card-text">A brief description of this innovative app.</p>
+                            <a href="https://github.com/MihneaDev/project2" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Creative Website</h5>
+                            <p class="card-text">A brief description of this creative website.</p>
+                            <a href="https://github.com/MihneaDev/project3" target="_blank" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="contact" class="mb-5">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to me at <a href="mailto:mihneacoman25@protonmail.com">mihneacoman25@protonmail.com</a>.</p>
+            <h2 data-aos="fade-right">Contact</h2>
+            <p data-aos="fade-up">
+                Feel free to reach out to me at <a href="mailto:mihneacoman25@protonmail.com">mihneacoman25@protonmail.com</a>.
+            </p>
         </section>
     </main>
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="text-center py-4">
         <p>&copy; 2025 MihneaDev. All rights reserved.</p>
     </footer>
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-rlp8W6Jb6j7O1dQ9xRj8bC5X+eE7m9m6v8k4L2wJmH0mV6UOA5rYc3S+8gk5bq1e" crossorigin="anonymous"></script>
+    <!-- AOS (Animate on Scroll) JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
